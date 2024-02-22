@@ -156,7 +156,6 @@ async def start(client, message):
                 suz = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
-                    caption=f_caption,
                     protect_content=msg.get('protect', False),
                     reply_markup=InlineKeyboardMarkup(
                         [
@@ -175,8 +174,7 @@ async def start(client, message):
                 logger.warning(f"Floodwait of {e.x} sec.")
                 suz = await client.send_cached_media(
                     chat_id=message.from_user.id,
-                    file_id=msg.get("file_id"),
-                    caption=f_caption,
+                    file_id=msg.get("file_id"),                    
                     protect_content=msg.get('protect', False),
                     reply_markup=InlineKeyboardMarkup(
                         [
@@ -195,9 +193,11 @@ async def start(client, message):
                 continue
             await asyncio.sleep(1) 
         await sts.delete()
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
         await asyncio.delete(600)
         for i in DL:
             await i.delete()
+        await k.edit_text("<b>𝗬𝗼𝘂𝗿 𝗙𝗶𝗹𝗲𝘀 𝗛𝗮𝘃𝗲 𝗕𝗲𝗲𝗻 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗧𝗼 𝗔𝘃𝗼𝗶𝗱 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗜𝗻𝗳𝗿𝗶𝗻𝗴𝗲𝗺𝗲𝗻𝘁.</b>")
         DL = []
         return
     elif data.split("-", 1)[0] == "DSTORE":
