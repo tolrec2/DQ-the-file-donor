@@ -256,7 +256,7 @@ async def start(client, message):
             await sts.delete()
             for i in DZ:
                     await i.delete()
-                DZ = []
+            DZ = []
         return 
 
     elif data.split("-", 1)[0] == "verify":
