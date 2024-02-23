@@ -144,11 +144,11 @@ async def start(client, message):
             title = msg.get("title")
             size=get_size(int(msg.get("size", 0)))
             f_caption=msg.get("caption", "")
-            print(f_caption)
+            
             if BATCH_FILE_CAPTION:
                 try:
                     f_caption=BATCH_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
-                    print(f_caption)
+                    
                 except Exception as e:
                     logger.exception(e)
                     f_caption=f_caption
