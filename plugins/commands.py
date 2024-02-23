@@ -371,7 +371,7 @@ async def start(client, message):
             protect_content=True if PROTECT_CONTENT else False,
             reply_markup=InlineKeyboardMarkup(btn)
         )
-        return
+            return
     await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
