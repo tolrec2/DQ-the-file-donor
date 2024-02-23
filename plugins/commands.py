@@ -391,6 +391,7 @@ async def start(client, message):
         mrtg=await client.send_message(message.from_user.id, text="❗️❗️❗️IMPORTANT❗️️❗️❗️\nThis Movie Files/Videos will be deleted in 5 mins 🫥 (Due to Copyright Issues).\nPlease forward this ALL Files/Videos to your Saved Messages and Start Download there")
         await asyncio.sleep(300) 
         await MRTG.delete()
+        await asyncio.sleep(300) 
         await mrtg.delete()
         await client.send_message(message.from_user.id, text="𝗬𝗼𝘂𝗿 𝗙𝗶𝗹𝗲𝘀 𝗛𝗮𝘃𝗲 𝗕𝗲𝗲𝗻 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗧𝗼 𝗔𝘃𝗼𝗶𝗱 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗜𝗻𝗳𝗿𝗶𝗻𝗴𝗲𝗺𝗲𝗻𝘁.")
         
