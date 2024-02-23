@@ -156,6 +156,7 @@ async def start(client, message):
                 suz = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
+                    caption=f_caption,
                     protect_content=msg.get('protect', False),
                     reply_markup=InlineKeyboardMarkup(
                         [
@@ -174,7 +175,8 @@ async def start(client, message):
                 logger.warning(f"Floodwait of {e.x} sec.")
                 suz = await client.send_cached_media(
                     chat_id=message.from_user.id,
-                    file_id=msg.get("file_id"),                    
+                    file_id=msg.get("file_id"),   
+                    caption=f_caption,
                     protect_content=msg.get('protect', False),
                     reply_markup=InlineKeyboardMarkup(
                         [
