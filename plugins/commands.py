@@ -152,10 +152,10 @@ async def start(client, message):
                 except Exception as e:
                     logger.exception(e)
                     f_caption=f_caption
-                    print(f_caption)
+                    
             if f_caption is None:
                 f_caption = f"{title}"
-                print(f_caption)
+                
             try:
                 suz = await client.send_cached_media(
                     chat_id=message.from_user.id,
