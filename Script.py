@@ -193,7 +193,9 @@ Nᴀᴍᴇ - {}"""
     CAPTION = """<b>📂Fɪʟᴇɴᴀᴍᴇ : {file_name}
 
 <b> Size ⚙️: {file_size}</b>"""
-
+    
+    BATCH_FILE_CAPTION = """{file_caption}"""
+    
     IMDB_TEMPLATE_TXT = """
 <b>Query: {query}
 IMDb Data:
