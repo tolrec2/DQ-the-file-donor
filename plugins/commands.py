@@ -372,7 +372,7 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(btn)
         )
         return
-     await client.send_cached_media(
+    await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
