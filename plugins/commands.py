@@ -372,7 +372,7 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(btn)
         )
         return
-        MRTG=await client.send_cached_media(
+     await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
@@ -388,9 +388,6 @@ async def start(client, message):
             ]
         )
     )
-        await asyncio.sleep(300) 
-        await MRTG.delete()
-        await client.send_message(message.from_user.id, text="𝗬𝗼𝘂𝗿 𝗙𝗶𝗹𝗲𝘀 𝗛𝗮𝘃𝗲 𝗕𝗲𝗲𝗻 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗧𝗼 𝗔𝘃𝗼𝗶𝗱 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗜𝗻𝗳𝗿𝗶𝗻𝗴𝗲𝗺𝗲𝗻𝘁.")
         
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
