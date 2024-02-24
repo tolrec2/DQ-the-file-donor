@@ -192,13 +192,7 @@ Nᴀᴍᴇ - {}"""
 
     CAPTION = """<b>📂Fɪʟᴇɴᴀᴍᴇ : {file_name}
 
-<b> Size ⚙️: {file_size}</b>
-
-❗️❗️❗️IMPORTANT❗️❗️❗️
-
-This Movie Files/Videos will be deleted in 5 mins 🫥 (Due to Copyright Issues).
-
-Please forward this ALL Files/Videos to your Saved Messages and Start Download there"""
+<b> Size ⚙️: {file_size}</b>"""
     
     BATCH_FILE_CAPTION = """{file_caption}"""
     
