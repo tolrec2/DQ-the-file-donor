@@ -1700,11 +1700,13 @@ async def auto_filter(client, msg, spoll=False):
                 if settings['auto_delete']:
                     await asyncio.sleep(600)
                     await hehe.delete()
+                    await message.reply_text(text=f"Hey {message.from_user.mention},\n\nYour request has been deleted\n(Due to copyright issues)\n\nIf you want to request again, please send a new request")
                     await message.delete()
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
                 await asyncio.sleep(600)
                 await hehe.delete()
+                await message.reply_text(text=f"Hey {message.from_user.mention},\n\nYour request has been deleted\n(Due to copyright issues)\n\nIf you want to request again, please send a new request")
                 await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
@@ -1714,11 +1716,13 @@ async def auto_filter(client, msg, spoll=False):
                 if settings['auto_delete']:
                     await asyncio.sleep(600)
                     await hmm.delete()
+                    await message.reply_text(text=f"Hey {message.from_user.mention},\n\nYour request has been deleted\n(Due to copyright issues)\n\nIf you want to request again, please send a new request")
                     await message.delete()
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
                 await asyncio.sleep(600)
                 await hmm.delete()
+                await message.reply_text(text=f"Hey {message.from_user.mention},\n\nYour request has been deleted\n(Due to copyright issues)\n\nIf you want to request again, please send a new request")
                 await message.delete()
         except Exception as e:
             logger.exception(e)
@@ -1727,11 +1731,13 @@ async def auto_filter(client, msg, spoll=False):
                 if settings['auto_delete']:
                     await asyncio.sleep(600)
                     await fek.delete()
+                    await message.reply_text(text=f"Hey {message.from_user.mention},\n\nYour request has been deleted\n(Due to copyright issues)\n\nIf you want to request again, please send a new request")
                     await message.delete()
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
                 await asyncio.sleep(600)
                 await fek.delete()
+                await message.reply_text(text=f"Hey {message.from_user.mention},\n\nYour request has been deleted\n(Due to copyright issues)\n\nIf you want to request again, please send a new request")
                 await message.delete()
     else:
         fuk = await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
@@ -1739,11 +1745,13 @@ async def auto_filter(client, msg, spoll=False):
             if settings['auto_delete']:
                 await asyncio.sleep(600)
                 await fuk.delete()
+                await message.reply_text(text=f"Hey {message.from_user.mention},\n\nYour request has been deleted\n(Due to copyright issues)\n\nIf you want to request again, please send a new request")
                 await message.delete()
         except KeyError:
             await save_group_settings(message.chat.id, 'auto_delete', True)
             await asyncio.sleep(600)
             await fuk.delete()
+            await message.reply_text(text=f"Hey {message.from_user.mention},\n\nYour request has been deleted\n(Due to copyright issues)\n\nIf you want to request again, please send a new request")
             await message.delete()
     if spoll:
         await msg.message.delete()
