@@ -721,7 +721,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         return await query.answer("Hᴇʏ, Yᴏᴜ ʜᴀᴠᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ ᴛᴏᴅᴀʏ. Yᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ. Cʜᴇᴄᴋ ᴍʏ PM ᴛᴏ ᴠᴇʀɪғʏ ᴀɴᴅ ɢᴇᴛ ғɪʟᴇs !", show_alert=True)
                     else:
                         sus = await client.send_cached_media(
-                            chat_id=query.message.chat.id,
+                            chat_id=query.from_user.id,
                             file_id=file_id,
                             caption=f_caption,
                             protect_content=True if ident == "filep" else False,
@@ -736,7 +736,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                 ]
                             )
                         )
-                        await query.answer('Cʜᴇᴄᴋ Group, I ʜᴀᴠᴇ sᴇɴᴛ ғɪʟᴇs ɪɴ Group', show_alert=True)
+                        await query.answer('Cʜᴇᴄᴋ PM, I ʜᴀᴠᴇ sᴇɴᴛ ғɪʟᴇs ɪɴ Group', show_alert=True)
                         k = await client.send_message(chat_id = query.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>5 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
                         await asyncio.sleep(300)                        
                         await sus.delete()
